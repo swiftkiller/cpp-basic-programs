@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+ clrscr();
+ char a[10];
+ int i,j,count=0;
+ cout<<"Enter 10 words ";
+ for(i=0;i<10;i++)
+   {
+    cin>>a;
+    strupr(a);
+    for(j=0;a[j]!='\0';)
+       j++;
+    if(a[j-1]=='A')
+      count++;
+   }
+ cout<<"The no. of words that ends with a are "<<count;
+ getch();
+}
+

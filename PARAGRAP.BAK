@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{
+ clrscr();
+ char a[1000];
+ int line=0, word=0, cha=0, i, letter=0, num=0;
+ cout<<"Enter \n \n";
+ gets(a);
+ for(i=0;a[i]!='\0';i++)
+  {
+   if(a[i]==' ')
+    {
+     word++;
+     cha++;
+    }
+   else
+    cha++;
+  }
+
+ for(i=0;a[i]!='\0';i++)
+ {
+  num++;
+
+  if(a[i]==' ')
+   letter=0;
+  else if(a[i]!=' ')
+   letter++
+  if(num==30)
+   {
+    line++;
+    num=letter;
+   }
+
+ }
+
+ cout<<"\nTHe no. of char are "<<cha<<"\nword "<<word+1<<"\nlines "<<line;
+ getch();
+}
